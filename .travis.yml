@@ -7,4 +7,4 @@ script:
   - SCORE=$(pylint *.py | sed -n 's/^Your code has been rated at \([-0-9.]*\)\/.*/\1/p')
   - if [ ${SCORE%.*} -lt 8 ]; then (exit 1); fi
   # integration testing
-  - ./test.sh
+  - bash test.sh
