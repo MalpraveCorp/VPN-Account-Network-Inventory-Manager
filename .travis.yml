@@ -4,9 +4,7 @@ before_install:
 script:
   
   # lint
-  - LINT=$(pylint *.py)
-  - echo $LINT
-  - SCORE=$($LINT | sed -n 's/^Your code has been rated at \([-0-9.]*\)\/.*/\1/p')
+  - SCORE=$(pylint *.py | sed -n 's/^Your code has been rated at \([-0-9.]*\)\/.*/\1/p')
   - if [ ${SCORE%.*} -lt 8 ]; then (exit 1); fi
   # integration testing
   - ./test.sh
