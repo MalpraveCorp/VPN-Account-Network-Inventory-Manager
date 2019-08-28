@@ -1,5 +1,5 @@
 
-# VPN Account/Network Manager
+# VPN Account/Network Manager [![Build Status](https://travis-ci.com/MalpraveCorp/VPN-Account-Network-Inventory-Manager.svg?branch=master)](https://travis-ci.com/MalpraveCorp/VPN-Account-Network-Inventory-Manager)
 
 
 VPN Account and network inventory manager
@@ -92,6 +92,7 @@ Revoke Account (Free IP)
 
 ### TODO
 Error validation
+
 Usage stats
 
 ### Maintainer
