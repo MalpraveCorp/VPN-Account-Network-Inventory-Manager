@@ -1,3 +1,8 @@
+language: python
+python:
+  - "2.7"
+  - "3.6"
+
 before_install:
   - pip install --user pylint
 
@@ -6,5 +11,6 @@ script:
   # lint
   - SCORE=$(pylint *.py | sed -n 's/^Your code has been rated at \([-0-9.]*\)\/.*/\1/p')
   - if [ ${SCORE%.*} -lt 8 ]; then (exit 1); fi
+  
   # integration testing
   - bash test.sh
